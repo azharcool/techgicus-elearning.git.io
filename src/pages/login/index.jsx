@@ -10,12 +10,12 @@ function Login() {
         <form>
           <div className="form-group">
             <label>Username</label>
-            <input type="text" placeholder="enter your name" />
+            <input type="text"/>
           </div>
 
           <div className="form-group">
             <label>Password</label>
-            <input type="password" placeholder="******" />
+            <input type="password" />
           </div>
 
           <div className="forgot-link">
