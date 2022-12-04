@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import "./theme/global.css"
+
+// absolute path
+// relative path
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

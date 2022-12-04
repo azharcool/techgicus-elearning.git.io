@@ -1,0 +1,114 @@
+.login-wrapper {
+  background-color: #000227;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: inline-block;
+  background-color: red;
+  background: linear-gradient(
+    180deg,
+    rgba(229, 229, 229, 0.35) 0%,
+    rgba(217, 217, 217, 0.07) 98.29%
+  );
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.card h1 {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 50px;
+  color: #000331;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Form */
+form .form-group {
+  margin-top: 20px;
+  min-width: 350px;
+}
+
+form .form-group label {
+  color: #ffffff;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+form .form-group input {
+  background: rgba(217, 217, 217, 0.13);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 20px;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+
+form .forgot-link {
+  text-align: end;
+}
+
+form .forgot-link a {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #d9d9d9;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+form .login-btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  background-color: #000227;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon .google-icon {
+  margin: 0 20px;
+}
+
+.create-account-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.create-account-wrapper a {
+  text-decoration: none;
+  font-family: "Raleway";
+  font-size: 15px;
+  color: #767070;
+}
