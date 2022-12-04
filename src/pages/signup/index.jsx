@@ -1,31 +1,30 @@
 import React from "react";
-
 import Background from "../../components/background";
 import Button from "../../components/button";
-import FormGroup from "../../components/form/FormGroup";
 import SocialLogin from "../../components/social";
-import "./login.css";
+import FormGroup from "../../components/form/FormGroup";
 
-function Login() {
+function Signup() {
   return (
     <Background>
       <div className="card">
-        <h1>Login</h1>
+        <h1>Sign Up</h1>
         <form>
           <FormGroup label="Username" type="text" />
+          <FormGroup label="Email" type="email" />
           <FormGroup label="Password" type="password" />
-          
+
           <div className="forgot-link">
-            <a href="/forgot">forgot Password</a>
+            <a href="/">forgot Password</a>
           </div>
 
-          <Button label="login" />
+          <Button label="Sign Up" />
         </form>
 
         <SocialLogin />
 
         <div className="create-account-wrapper">
-          <a href="/signup">
+          <a href="/">
             <span>create an account</span>
           </a>
         </div>
@@ -34,6 +33,4 @@ function Login() {
   );
 }
 
-// without values -> boolean pro
-
-export default Login;
+export default Signup;
