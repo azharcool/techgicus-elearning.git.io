@@ -30,7 +30,18 @@ function Login() {
     <Background>
       <div className="card">
         <h1>Login</h1>
-        <form>
+        <form
+          onSubmit={(e) => {
+            // console.clear();
+            e.preventDefault()
+            // validation
+            // api call
+            // isApi call success -> redirect landing page
+            // isApi call failed -> same page
+            console.log("e", e);
+          }}
+        
+        >
           <FormGroup
             label="Username"
             type="text"

@@ -3,7 +3,9 @@ import React from "react";
 function Button(props) {
   return (
     <div className="login-btn">
-      <button>{props.label}</button>
+      <button type="submit" onClick={(e) => {
+        console.log('ee',e);
+      }}>{props.label}</button>
     </div>
   );
 }
