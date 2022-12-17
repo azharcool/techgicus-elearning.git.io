@@ -10,6 +10,7 @@ function FormGroup(props) {
         onChange={props.onChange}
         id={props.id}
         name={props.name}
+        value={props.value}
       />
       {props.error.length > 0 && (
         <span style={{ color: "#EB455F", fontSize: 15, paddingLeft: 5 }}>

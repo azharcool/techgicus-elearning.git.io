@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Background from "../../components/background";
 import Button from "../../components/button";
@@ -6,6 +6,7 @@ import FormGroup from "../../components/form/FormGroup";
 import SocialLogin from "../../components/social";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
+import Loader from "../../components/loader";
 
 function Login() {
   // Destructing -> extract the values one by one from array and object
@@ -13,6 +14,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [userErr, setUserErr] = useState("");
   const [passErr, setPassErr] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   console.clear();
@@ -21,11 +23,13 @@ function Login() {
   const onChangeUserHandler = (e) => {
     const value = e.target.value;
     setUser(value);
+    setUserErr("");
   };
 
   const onChangePassHandler = (e) => {
     const value = e.target.value;
     setPassword(value);
+    setPassErr("");
   };
 
   return (
@@ -48,19 +52,14 @@ function Login() {
               setPassErr("Please, enter your password");
             }
 
-            if (userErr) {
-              setUserErr("");
-            }
-
-            if (passErr) {
-              setPassErr("");
-            }
-
             if (isUser === false && isPass === false) {
               // navigate to home
-              navigate("/home", {
-                replace: true
-              })
+              setIsLoading(true);
+              // Web Api -> async
+              setTimeout(() => {
+                navigate("/home");
+                setIsLoading(false);
+              }, 2000);
             }
           }}
         >
@@ -71,6 +70,7 @@ function Login() {
             name="username"
             onChange={onChangeUserHandler}
             error={userErr}
+            value={user}
           />
           <FormGroup
             label="Password"
@@ -79,6 +79,7 @@ function Login() {
             name="password"
             onChange={onChangePassHandler}
             error={passErr}
+            value={password}
           />
           <div className="forgot-link">
             <a href="/forgot">forgot Password</a>
@@ -92,6 +93,7 @@ function Login() {
           </a>
         </div>
       </div>
+      {isLoading && <Loader />}
     </Background>
   );
 }
