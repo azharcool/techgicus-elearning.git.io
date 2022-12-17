@@ -11,6 +11,11 @@ function FormGroup(props) {
         id={props.id}
         name={props.name}
       />
+      {props.error.length > 0 && (
+        <span style={{ color: "#EB455F", fontSize: 15, paddingLeft: 5 }}>
+          {props.error}
+        </span>
+      )}
     </div>
   );
 }

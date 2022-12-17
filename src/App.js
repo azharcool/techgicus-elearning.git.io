@@ -2,6 +2,7 @@ import Login from "./pages/login";
 import Signup from "./pages/signup";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Forgot from "./pages/forgot";
+import Home from "./pages/home";
 // for navigation
 
 // Authentication or Authorization
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot" element={<Forgot />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/" element={<div>langing route </div>} />
         <Route path="*" element={<div>not found</div>} />
       </Routes>
